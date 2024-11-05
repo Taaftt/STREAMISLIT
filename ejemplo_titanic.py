@@ -17,34 +17,18 @@ st.write(df.head())
 st.subheader("Estadísticas descriptivas")
 st.write(df.describe())
 
-# Graficar la distribución de la popularidad de las canciones
-st.subheader("Distribución de Popularidad")
-plt.figure(figsize=(10, 6))
-sns.histplot(df['popularity'], kde=True, color='blue')
-plt.title("Distribución de Popularidad de las Canciones")
-plt.xlabel("Popularidad")
-plt.ylabel("Frecuencia")
-st.pyplot()
+
 
 # Graficar la duración de las canciones
 st.subheader("Duración de las canciones")
 plt.figure(figsize=(10, 6))
-sns.histplot(df['duration_ms'] / 1000, kde=True, color='green')  # Convertir a segundos
+sns.histplot(df["duration"] / 1000, kde=True, color='green')  # Convertir a segundos
 plt.title("Distribución de Duración de las Canciones (segundos)")
 plt.xlabel("Duración (segundos)")
 plt.ylabel("Frecuencia")
 st.pyplot()
 
-# Graficar el número de canciones por género
-st.subheader("Número de Canciones por Género")
-genre_count = df['genre'].value_counts()
-plt.figure(figsize=(12, 6))
-sns.barplot(x=genre_count.index, y=genre_count.values, palette='viridis')
-plt.title("Número de Canciones por Género")
-plt.xlabel("Género")
-plt.ylabel("Número de Canciones")
-plt.xticks(rotation=45)
-st.pyplot()
+
 
 # Filtro interactivo para el usuario
 st.sidebar.header("Filtros")
