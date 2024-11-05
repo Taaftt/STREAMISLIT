@@ -3,12 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Carga el archivo CSV "database_titanic.csv" en un DataFrame de pandas.
-df = pd.read_csv("database_titanic.csv")
+df = pd.read_csv("charts.csv")
 
 # Muestra un título y una descripción en la aplicación Streamlit.
 st.write("""
-# Mi primera aplicación interactiva
-## Gráficos usando la base de datos del Titanic
+#Estadisticas de spotify 
 """)
 
 # Usando la notación "with" para crear una barra lateral en la aplicación Streamlit.
